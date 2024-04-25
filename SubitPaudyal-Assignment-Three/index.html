@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 3- Repair Form</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-userName">
+            <div><img src="images/logo.png" alt="logo of repair shop"></div>
+            <div class="userInfo">
+                <p>Hi, Username</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="heading">
+            <h1>Computer Repair Reporting</h1>
+
+            <p>There are several methods for reporting a problem at problem to ITS, the easiest way is to fill out the form below and submit it to ITS. If you need immediate assistance or are not able to describe the issue, please call 1-888-FIX-THIS.</p>
+        </div>
+        
+        <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+            <fieldset>
+                <legend>User's Contact Info.</legend>
+                <div class="two-columns">
+                    <div>
+                       <label for ="fName">*First Name</label>
+                       <input id="fName" name="fName" placeholder ="FirstName" type="text" required>
+                    </div>
+
+                    <div>
+                        <label for ="lName">*Last Name</label>
+                        <input id="lName" name="lName" placeholder ="LastName" type="text" required>
+                     </div>
+
+                    <div>
+                        <label for ="email">*Email</label>
+                       <input id="email" name="email" placeholder ="fixmenow123@gmail.com" type="email" required>
+                    </div>
+
+                    <div>
+                        <label for ="telephone">*Telephone</label>
+                       <input id="telephone" name="telephone" placeholder ="123-456-7890" type="tel" pattern=[0-9]+ required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Room & Machine Number</legend>
+                <div class="two-columns">
+                    <div>
+                        <label for ="roomNum">Room Number:</label>
+                        <select id="roomNum" name="roomNum">
+                            <option value="S306">S306</option>
+                            <option value="S308">S308</option>
+                            <option value="L2">L2</option>
+                            <option value="ME201">ME201</option>
+                            <option value="ME215">ME215</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for ="machineNum">Machine number:</label>
+                        <select id="machineNum" name="machineNum">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Issue Description</legend> 
+                <div class="two-columns"> 
+                    <div>
+                        <label> Does the computer turn on?</label><br>
+                        <input id="turnOnYes" name ="radioButton" type="radio" value="Yes">
+                        <label for="turnOnYes">Yes</label> 
+                        <input id="turnOnNo" name ="radioButton" type="radio" value="No">
+                        <label for="turnOnNo">No</label> 
+                    </div>
+
+                    <div>                     
+                        <label for="reportingDate">Reporting Date</label>
+                        <input id="reportingDate" name="reportingDate" type="date" required>
+                    </div>
+                </div>
+
+                <div class="issue-desc">
+                    <label for="description">Brief Description of Problem:</label>
+                    <textarea name="description" id="description" placeholder="Please provide detailed description"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="fixMeButton">
+                <input type="submit" value="Fix me">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>WEBD1102 - Winter 2023: Subit Paudyal - Assignment Three </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+body {
+    background-color: #317773;
+    color: #E2D1F9;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    margin: 5px 10px 0 ;
+}
+
+img {
+    width: 75px;
+    height: auto;
+}
+
+header {
+    padding: 15px 5px;
+    margin: 5px;
+}
+
+main {
+	width: 100%;
+	margin: 0 auto;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 30px 0 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 15px;
+}
+
+footer {
+    margin: 20px auto 0px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*Attributes Selectors*/
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    border: 1px solid #99F443;
+    color: #000;
+    display: block;
+	font-weight: 600;
+    height: 25px;
+    margin-top:5px;
+	width: 99%;
+}
+
+input[type="date"]{
+	border-color: #99F443;
+	border-style: solid;
+    font-weight: 600;
+    margin: 5px 0 10px;
+    width: 95%;
+}
+
+input[type="submit"] {
+    border: 2px solid #99F443;
+	border-radius: 5px;
+    display: inline-block;
+	font-size: 14px;
+    font-weight: 600;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+input[type="submit"]:hover {
+    background: #99F443;
+    border: 2px #317773;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #FFE77AFF;
+    border: none;
+}
+
+input, select, textarea {margin: 5px 0 10px;}
+
+select, textarea {
+    border-color: #99F443;
+    font-weight: 600;
+    width: 99%;
+}
+
+select {height: 25px;}
+
+textarea {height: 150px;}
+
+fieldset {
+    border-color: #E2D1F9;
+	border-style: solid;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+}
+
+legend {font-size: 14px;}
+
+button {
+	border: 2px solid #E2D1F9;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 20px;
+	padding: 10px 30px;
+}
+
+/*For placeholder styling*/
+::placeholder {
+	color: #317773;
+    font-size: 12px;
+	padding-left: 5px;
+}
+
+/*Classes*/
+
+.logo-userName {
+    display: grid;
+	grid-template-columns: 1fr 50px;
+}
+
+.userInfo {
+    font-size: 12px;
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+.heading{
+    margin-bottom: 20px;
+}
+.fixMeButton {text-align: left;}
+
+.two-columns{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+.issue-desc {width: 100%;}
+
+
+/*Media Screens*/
+
+@media screen and (min-width: 375px){
+    .logo-userName {
+        grid-template-columns: 1fr 150px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    img {width: 100px;}
+    main {width: 90%;}
+    p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    textarea {height: 125px;}
+    .two-columns {
+        grid-gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .userInfo{font-size: 14px}
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {font-size: 30px;}
+    main {width: 75%;}
+    p {font-size: 16px;}
+    textarea {height: 100px;}
+}
+   
+@media screen and (min-width: 1440px) {
+    img {width: 150px;}
+    .userInfo{font-size: 20px;}
+    .two-columns {grid-gap:25px;}
+    main {width: 65%;}
+}
